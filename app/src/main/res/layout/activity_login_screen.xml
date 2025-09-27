@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginScreen">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        app:cardCornerRadius="16dp"
+        tools:layout_editor_absoluteY="289dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/dseu_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:contentDescription="dseu logo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dseu_logo" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:text="Sign in"
+                android:textColor="#0072BC"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Username"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="32dp"
+                app:boxCornerRadiusBottomStart="32dp"
+                app:boxCornerRadiusTopEnd="32dp"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeColor="#6BFFFFFF"
+                app:boxCornerRadiusTopStart="32dp"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6C767F"
+                    android:layout_gravity="center"
+                    android:textColorHighlight="#6C767F"
+                    android:textColorLink="#6C767F"
+                    android:gravity="center"
+                    android:textColorHint="#6C767F"
+                    android:drawableStart="@drawable/mail_24px"
+                    android:drawableTint="#6C767F"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:hint="Enter your email address" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:padding="8dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="32dp"
+                app:boxCornerRadiusBottomStart="32dp"
+                app:boxCornerRadiusTopEnd="32dp"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeColor="#6BFFFFFF"
+                app:boxCornerRadiusTopStart="32dp"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/lock_24px"
+                    android:drawableTint="#6C767F"
+                    android:gravity="center"
+                    android:hint="Enter your password"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="#6C767F"
+                    android:inputType="numberPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/signUpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0072BC"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:text="Sign in"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/profile_image"
+            app:civ_border_color="@color/gray_light"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/divider_header"
+            app:layout_constraintEnd_toStartOf="@+id/profile_name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingClass" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Shivam Gupta"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/profile_email"
+            app:layout_constraintEnd_toStartOf="@+id/edit_button"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintTop_toTopOf="@id/profile_image"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="andrejust@gmail.com"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image"
+            app:layout_constraintEnd_toEndOf="@id/profile_name"
+            app:layout_constraintStart_toStartOf="@id/profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_edit_profile"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/profile_image"
+            app:srcCompat="@drawable/edit_24px" />
+
+        <View
+            android:id="@+id/divider_header"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray_light"
+            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/header_activity"
+            style="@style/SectionHeader"
+            android:textColor="@color/gray_dark"
+            android:layout_marginTop="16dp"
+            android:text="Personal Information"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_header" />
+
+        <LinearLayout
+            android:id="@+id/activity_project"
+            style="@style/MenuItemContainer"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_activity">
+
+            <ImageView
+                style="@style/MenuIcon"
+                android:contentDescription="@string/cd_project_icon"
+                app:srcCompat="@drawable/circular_account" />
+
+            <TextView
+                style="@style/MenuItemText"
+                android:text="Mr. Shivam Gupta" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_task"
+            style="@style/MenuItemContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_project">
+
+            <ImageView
+                style="@style/MenuIcon"
+                android:contentDescription=""
+                app:srcCompat="@drawable/mail_24px" />
+
+            <TextView
+                style="@style/MenuItemText"
+                android:text="shivamgupta@gmail.com" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_briefing"
+            style="@style/MenuItemContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_task">
+
+            <TextView
+                style="@style/MenuIcon"
+                android:layout_width="62dp"
+                android:text="Gender"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/genderTv"
+                style="@style/MenuItemText"
+                android:text="Male" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_calendar"
+            style="@style/MenuItemContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu_briefing">
+
+            <TextView
+                style="@style/MenuIcon"
+                android:layout_width="62dp"
+                android:text="DOB"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/MenuItemText"
+                android:text="1980-10-5" />
+        </LinearLayout>
+
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/header_general"
+            style="@style/SectionHeader"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Work Information"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_calendar" />
+
+        <LinearLayout
+            android:id="@+id/general_user_report"
+            style="@style/MenuItemContainer"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_general">
+
+            <TextView
+                style="@style/MenuIcon"
+                android:layout_width="121dp"
+                android:text="Date of Joining"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/date_of_joining"
+                style="@style/MenuItemText"
+                android:text="2020-10-3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/general_setting"
+            style="@style/MenuItemContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/general_user_report">
+
+            <TextView
+                style="@style/MenuIcon"
+                android:layout_width="124dp"
+                android:text="Campus"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/campus"
+                style="@style/MenuItemText"
+                android:text="Bhai Parmanand DSEU Campus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/general_support"
+            style="@style/MenuItemContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/general_setting">
+
+            <TextView
+                style="@style/MenuIcon"
+                android:layout_width="120dp"
+                android:text="Staff Type"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/teachingTv"
+                style="@style/MenuItemText"
+                android:text="Teaching" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/general_user"
+            style="@style/MenuItemContainer"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/general_support">
+
+            <TextView
+                style="@style/MenuIcon"
+                android:layout_width="121dp"
+                android:text="Designation"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/designationTv"
+                style="@style/MenuItemText"
+                android:text="Lecture" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/general_user">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="log out"
+                app:srcCompat="@drawable/log_out"
+                app:tint="@color/gray_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Log Out"
+                android:textColor="#AA4A44"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottom_spacer"
+            android:layout_width="411dp"
+            android:layout_height="1dp"
+            android:background="@color/gray_light"
+            app:layout_constraintBottom_toTopOf="@+id/logout_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/general_user"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
